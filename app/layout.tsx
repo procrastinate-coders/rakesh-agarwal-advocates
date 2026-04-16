@@ -9,7 +9,7 @@ import {
   manrope,
 } from '@/lib/fonts';
 
-const siteUrl = 'https://rakeshagarwal.in';
+const siteUrl = 'https://rakesh-agarwal-advocates.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

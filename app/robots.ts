@@ -16,6 +16,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://rakeshagarwal.in/sitemap.xml',
+    sitemap: 'https://rakesh-agarwal-advocates.vercel.app/sitemap.xml',
   };
 }
