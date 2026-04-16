@@ -10,20 +10,21 @@ import SocialLinks from '@/components/card/SocialLinks';
 import CardFooter from '@/components/card/CardFooter';
 
 export const metadata: Metadata = {
-  title: 'Rakesh Agarwal, IRS — Advocate & Advisor',
+  title: 'Rakesh Agarwal, IRS — Digital Visiting Card',
   description:
-    'Customs & Indirect Tax | Joint Commissioner (Rtd.) | GST, Customs, CHA, Central Excise, Service Tax, EOU, SEZ, PMLA, DRT',
+    'Save contact, call, or email Rakesh Agarwal — Advocate & Advisor specializing in Customs & Indirect Tax. Joint Commissioner (Rtd.), IRS.',
   openGraph: {
     type: 'profile',
-    title: 'Rakesh Agarwal, IRS — Advocate & Advisor',
+    title: 'Rakesh Agarwal, IRS — Digital Visiting Card',
     description:
-      'Customs & Indirect Tax | Joint Commissioner (Rtd.) | GST, Customs, CHA, Central Excise, Service Tax, EOU, SEZ, PMLA, DRT',
+      'Save contact, call, or email Rakesh Agarwal — Advocate & Advisor specializing in Customs & Indirect Tax. Joint Commissioner (Rtd.), IRS.',
     images: [{ url: '/og-card.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rakesh Agarwal, IRS — Advocate & Advisor',
-    description: 'Customs & Indirect Tax | Joint Commissioner (Rtd.)',
+    title: 'Rakesh Agarwal, IRS — Digital Visiting Card',
+    description:
+      'Save contact, call, or email Rakesh Agarwal — Advocate & Advisor | Customs & Indirect Tax',
     images: ['/og-card.png'],
   },
 };
