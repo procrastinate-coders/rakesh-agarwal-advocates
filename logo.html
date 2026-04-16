@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Logo — Rakesh Agarwal, Advocates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --serif: "Newsreader", Georgia, serif;
+    --sans: "Space Grotesk", -apple-system, system-ui, sans-serif;
+    --ink: #1B2E5B;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--serif);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background: #FCFCF8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Scale everything with --u */
+  .lockup {
+    --u: 1px;
+    display: flex;
+    align-items: flex-end;
+    color: var(--ink);
+  }
+  .lockup__R {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: calc(224 * var(--u));
+    line-height: 0.8;
+    letter-spacing: calc(-3.4 * var(--u));
+    margin-right: calc(-12 * var(--u));
+  }
+  .lockup__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: calc(34 * var(--u));
+  }
+  .lockup__AA {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: calc(88 * var(--u));
+    line-height: 1;
+    letter-spacing: calc(1.6 * var(--u));
+    opacity: 0.9;
+    margin-bottom: calc(-6 * var(--u));
+  }
+  .lockup__AA .it { font-style: italic; }
+  .lockup__wordmark {
+    position: relative;
+    margin-left: calc(40 * var(--u));
+  }
+  .lockup__wordmark-row {
+    display: flex;
+    align-items: baseline;
+    gap: calc(6 * var(--u));
+    white-space: nowrap;
+  }
+  .lockup__name {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: calc(34 * var(--u));
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .lockup__advocates {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 310;
+    font-size: calc(38 * var(--u));
+  }
+  .lockup__rule {
+    width: 100%;
+    height: calc(2 * var(--u));
+    background: var(--ink);
+    margin-top: calc(-8 * var(--u));
+  }
+</style>
+</head>
+<body>
+
+<div class="lockup">
+  <div class="lockup__R">R</div>
+  <div class="lockup__right">
+    <div class="lockup__AA">A<span class="it">A</span></div>
+    <div class="lockup__wordmark">
+      <div class="lockup__wordmark-row">
+        <span class="lockup__name">Rakesh Agarwal</span>
+        <span class="lockup__advocates">Advocates</span>
+      </div>
+      <div class="lockup__rule"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

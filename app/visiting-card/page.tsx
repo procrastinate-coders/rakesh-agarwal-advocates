@@ -1,0 +1,56 @@
+import type { Metadata } from 'next';
+import CoverBanner from '@/components/card/CoverBanner';
+import ProfileSection from '@/components/card/ProfileSection';
+import CardShowcase from '@/components/card/CardShowcase';
+import CtaRow from '@/components/card/CtaRow';
+import ContactList from '@/components/card/ContactList';
+import PracticeAreas from '@/components/card/PracticeAreas';
+import CardOffices from '@/components/card/CardOffices';
+import SocialLinks from '@/components/card/SocialLinks';
+import CardFooter from '@/components/card/CardFooter';
+
+export const metadata: Metadata = {
+  title: 'Rakesh Agarwal, IRS — Advocate & Advisor',
+  description:
+    'Customs & Indirect Tax | Joint Commissioner (Rtd.) | GST, Customs, CHA, Central Excise, Service Tax, EOU, SEZ, PMLA, DRT',
+  openGraph: {
+    type: 'profile',
+    title: 'Rakesh Agarwal, IRS — Advocate & Advisor',
+    description:
+      'Customs & Indirect Tax | Joint Commissioner (Rtd.) | GST, Customs, CHA, Central Excise, Service Tax, EOU, SEZ, PMLA, DRT',
+    images: [{ url: '/og-card.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rakesh Agarwal, IRS — Advocate & Advisor',
+    description: 'Customs & Indirect Tax | Joint Commissioner (Rtd.)',
+    images: ['/og-card.png'],
+  },
+};
+
+export default function VisitingCard() {
+  return (
+    <div className="card-page">
+      {/* Material Symbols font */}
+      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+      <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet"
+      />
+
+      <div className="card-page__inner">
+        <CoverBanner />
+        <ProfileSection />
+        <div className="gold-rule" />
+        <CardShowcase />
+        <div className="gold-rule" />
+        <CtaRow />
+        <ContactList />
+        <PracticeAreas />
+        <CardOffices />
+        <SocialLinks />
+        <CardFooter />
+      </div>
+    </div>
+  );
+}
