@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   },
   description:
     'Rakesh Agarwal, IRS (Retd.) Joint Commissioner — Advocate specializing in Customs, GST, Central Excise, Service Tax and Foreign Trade.',
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.svg',
+  },
   openGraph: {
     type: 'website',
     title: 'Rakesh Agarwal — Advocate · IRS (Retd.)',

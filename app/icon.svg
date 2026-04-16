@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="8" fill="#1B2E5B"/>
+  <text x="8" y="52" font-family="Georgia, 'Times New Roman', serif" font-weight="500" font-size="50" fill="#FFFDF9" letter-spacing="-2">R</text>
+  <text x="36" y="36" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="22" fill="rgba(255,253,249,0.9)" letter-spacing="1">A</text>
+  <text x="49" y="36" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="22" fill="rgba(255,253,249,0.9)" font-style="italic" letter-spacing="1">A</text>
+  <line x1="36" y1="42" x2="62" y2="42" stroke="#B8973A" stroke-width="1.5"/>
+</svg>

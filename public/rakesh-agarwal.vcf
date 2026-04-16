@@ -2,14 +2,9 @@ BEGIN:VCARD
 VERSION:3.0
 N:Agarwal;Rakesh;;;IRS
 FN:Rakesh Agarwal, IRS
-TITLE:Advocate & Advisor (Joint Commissioner (Rtd.))
+TITLE:Advocate & Advisor | Joint Commissioner (Rtd.)
 ORG:Rakesh Agarwal Advocates
 TEL;TYPE=CELL:+91-9818830557
 TEL;TYPE=WORK:011-40571716
 EMAIL;TYPE=WORK:rakeshagarwal.irs@gmail.com
-ADR;TYPE=WORK:;;B9, 1st Apartment, 207 IP Extension, Patparganj;New Delhi;;110092;India
-ADR;TYPE=WORK:;;5/7/2/B-3, Kaveri Center, Sanjay Palace;Agra;;282002;India
-ADR;TYPE=WORK:;;8th, 21st Main, 9th Cross, Indiranagar 1st Stage;Bangalore;;560038;India
-NOTE:Customs & Indirect Tax | GST, Customs, CHA, Central Excise, Service Tax, Exp. Promotion Schemes, EOU, SEZ, PMLA, DRT
-URL:
 END:VCARD
