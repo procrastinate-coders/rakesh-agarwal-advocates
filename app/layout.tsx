@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import {
   newsreader,
@@ -44,7 +45,10 @@ export default function RootLayout({
       lang="en"
       className={`${newsreader.variable} ${playfairDisplay.variable} ${spaceGrotesk.variable} ${inter.variable} ${manrope.variable}`}
     >
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
