@@ -10,7 +10,7 @@ export const offices: Office[] = [
     badge: '\u2605 \u00A0 Principal Office',
     city: 'New Delhi',
     region: 'Head Chambers',
-    address: 'B9, 1st Apartment\n207 IP Extension, Patparganj\nNew Delhi \u2014 110092',
+    address: '65, Jai Apartment\n102, I.P. Extension, Patparganj\nNew Delhi \u2014 110092',
   },
   {
     badge: 'Office 02',
@@ -22,7 +22,7 @@ export const offices: Office[] = [
     badge: 'Office 03',
     city: 'Bangalore',
     region: 'Karnataka',
-    address: '8th, 21st Main, 9th Cross\nIndiranagar 1st Stage\nBangalore \u2014 560038',
+    address: '8, 21st Main, 9th Cross\nIndiranagar 1st Stage\nBangalore \u2014 560038',
   },
 ];
 
@@ -38,7 +38,7 @@ export const cardOffices: CardOffice[] = [
   {
     city: 'New Delhi',
     sub: 'Head Office',
-    address: 'B9, 1st Apartment,\n207 IP Extension,\nPatparganj \u2013 110092',
+    address: '65, Jai Apartment,\n102, I.P. Extension,\nPatparganj \u2013 110092',
   },
   {
     city: 'Agra',
@@ -48,7 +48,7 @@ export const cardOffices: CardOffice[] = [
   {
     city: 'Bangalore',
     sub: 'Karnataka',
-    address: '8th, 21st Main, 9th Cross, Indiranagar 1st Stage \u2013 560038',
+    address: '8, 2nd Main, 9th Cross, Indiranagar 1st Stage \u2013 560038',
     full: true,
   },
 ];

@@ -10,7 +10,7 @@ import { landmarks } from '@/lib/data/landmarks';
 import { cases, caseYears } from '@/lib/data/cases';
 import { practiceAreas } from '@/lib/data/practice-areas';
 import LogoLockup from '@/components/shared/LogoLockup';
-import BentoCaseLedger from '@/components/variant/BentoCaseLedger';
+import BentoCaseLedger from '@/components/archive/variant/BentoCaseLedger';
 
 export const metadata: Metadata = {
   title: 'Rakesh Agarwal — Advocate & Advisor',

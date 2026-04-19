@@ -13,7 +13,7 @@ export const awards: Award[] = [
     year: 'DGEP',
   },
   {
-    text: "Appreciation Certificate by CBIC for meritorious service \u2014 presented by the Hon'ble Finance Minister.",
+    text: "Appreciation Certificate by CBIC for rendering dedicated and meritorious service, and promoting excellence in the working of the Department \u2014 presented by the Hon'ble Finance Minister.",
     year: '2018',
   },
   {

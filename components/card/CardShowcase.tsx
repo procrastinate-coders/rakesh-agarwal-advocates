@@ -17,7 +17,7 @@ export default function CardShowcase() {
           </div>
           <div className="card-item">
             <Image
-              src="/screenshots/back-H-accent-bars.png"
+              src="/screenshots/back-C-pin-icons.png"
               alt="Back of visiting card"
               width={800}
               height={480}
