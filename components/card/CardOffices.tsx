@@ -12,7 +12,6 @@ export default function CardOffices() {
           {cardOffices.map((o) => (
             <div key={o.city} className={`card-office ${o.full ? 'full' : ''}`}>
               <p className="card-office__city">{o.city}</p>
-              <p className="card-office__sub">{o.sub}</p>
               <p className="card-office__addr" dangerouslySetInnerHTML={{ __html: o.address.replace(/\n/g, '<br/>') }} />
             </div>
           ))}

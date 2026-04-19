@@ -1,7 +1,7 @@
 export interface Office {
   badge: string;
   city: string;
-  region: string;
+  region?: string;
   address: string;
 }
 
@@ -9,7 +9,6 @@ export const offices: Office[] = [
   {
     badge: '\u2605 \u00A0 Principal Office',
     city: 'New Delhi',
-    region: 'Head Chambers',
     address: '65, Jai Apartment\n102, I.P. Extension, Patparganj\nNew Delhi \u2014 110092',
   },
   {
