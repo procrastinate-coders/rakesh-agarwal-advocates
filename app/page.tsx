@@ -39,7 +39,6 @@ export default function Home() {
       <PracticeRibbon />
       <PortraitEditorial />
       <AboutSection />
-      <PullQuote />
 
       <Timeline
         section={SECTIONS.education}

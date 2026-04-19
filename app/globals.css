@@ -4352,14 +4352,12 @@ ol {
 /* Floating stat pills */
 /* Intro text paragraph */
 .gm-hero__intro-text {
-  max-width: 1200px;
-  margin: 48px auto 0;
-  width: 100%;
+  margin-top: 32px;
 }
 
 .gm-hero__intro-text p {
   font-family: var(--body);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.8;
   color: rgba(226, 232, 240, 0.5);
   font-weight: 300;
@@ -4369,11 +4367,10 @@ ol {
 
 /* Role pills row */
 .gm-hero__roles {
-  max-width: 1200px;
-  margin: 36px auto 0;
-  width: 100%;
+  margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
 }
 
@@ -5509,18 +5506,16 @@ ol {
   }
 
   .gm-hero__intro-text {
-    margin-top: 32px;
+    margin-top: 24px;
   }
 
   .gm-hero__intro-text p {
     font-size: 15px;
-    text-align: center;
     max-width: 100%;
   }
 
   .gm-hero__roles {
-    justify-content: center;
-    margin-top: 24px;
+    margin-top: 20px;
     gap: 10px;
   }
 
@@ -5870,7 +5865,10 @@ ol {
   }
 
   .gm-pullquote {
-    padding: 32px 16px;
+    padding-top: 50px;
+    padding-bottom: 5px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .gm-ribbon {
@@ -5878,7 +5876,7 @@ ol {
   }
 
   .gm-ribbon__item {
-    font-size: 14px;
+    font-size: 20px;
     padding: 4px 10px;
   }
 
