@@ -19,6 +19,12 @@ const rows = [
     value: 'rakeshagarwal.irs@gmail.com',
     href: 'mailto:rakeshagarwal.irs@gmail.com',
   },
+  {
+    icon: 'language',
+    label: 'Website',
+    value: 'www.rakeshagarwaladvocates.com',
+    href: 'https://www.rakeshagarwaladvocates.com/',
+  },
 ];
 
 export default function ContactList() {

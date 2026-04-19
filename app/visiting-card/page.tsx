@@ -42,7 +42,7 @@ export default function VisitingCard() {
       <div className="card-page__inner">
         <CoverBanner />
         <ProfileSection />
-        <a className="card-visit-link" href="/">Visit Website &rarr;</a>
+        <a className="card-visit-link" href="/">www.rakeshagarwaladvocates.com &rarr;</a>
         <div className="gold-rule" />
         <CardShowcase />
         <div className="gold-rule" />
