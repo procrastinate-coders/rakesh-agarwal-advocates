@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Letterhead Iterations — Rakesh Agarwal, Advocates</title>
+<style>
+/* ============================================================
+   A4 LETTERHEAD ITERATIONS
+   Typeset in Georgia + Arial deliberately: these are the two
+   faces present on every Word install, so the .docx renders
+   identically on the client's machine. Brand fonts (Newsreader /
+   Space Grotesk) survive inside the logo, which ships as a PNG.
+   ============================================================ */
+:root {
+  --navy:    #1B2E5B;
+  --navy-70: rgba(27, 46, 91, .70);
+  --navy-55: rgba(27, 46, 91, .55);
+  --gold:    #B8973A;
+  --cream:   #F1EDE4;
+  --rule:    rgba(27, 46, 91, .22);
+  --serif:   Georgia, "Times New Roman", serif;
+  --sans:    Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #6E6E72; padding: 14mm 0; font-family: var(--serif); }
+
+.page {
+  width: 210mm; height: 297mm;
+  background: #fff; margin: 0 auto 14mm;
+  position: relative; overflow: hidden;
+  box-shadow: 0 4mm 16mm rgba(0,0,0,.45);
+  color: #1A2744;
+}
+
+/* ---------- shared type ---------- */
+.lbl {                       /* gold micro-label */
+  font-family: var(--sans); font-size: 5.6pt; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
+}
+.val { font-family: var(--serif); font-size: 8pt; color: var(--navy); line-height: 1.45; }
+.city {
+  font-family: var(--sans); font-size: 6.6pt; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--navy);
+}
+.addr { font-family: var(--serif); font-size: 7.2pt; line-height: 1.45; color: var(--navy-70); }
+
+/* ---------- sample letter body ---------- */
+.letter { font-size: 10.5pt; line-height: 1.62; color: #1A2744; }
+.letter p { margin-bottom: 3.6mm; text-align: justify; }
+.letter .meta { font-size: 9.5pt; color: var(--navy-70); margin-bottom: 6mm; }
+.letter .to { margin-bottom: 5mm; text-align: left; }
+.letter .subj { font-weight: bold; margin-bottom: 4.5mm; text-align: left; }
+.letter .sign { margin-top: 8mm; }
+.letter .sign .nm { font-weight: bold; color: var(--navy); }
+.letter .sign .rl { font-size: 8.5pt; color: var(--navy-70); }
+
+.tag {                        /* variant caption, screen only */
+  position: absolute; top: 4mm; left: 6mm;
+  font-family: var(--sans); font-size: 6pt; letter-spacing: .2em;
+  text-transform: uppercase; color: rgba(27,46,91,.28);
+}
+
+/* ============================================================
+   ITERATION 1 — THE RAIL
+   Identity lives in a tinted panel down the right edge, inset
+   from the trim so an ordinary office printer can reproduce it.
+   ============================================================ */
+.p1 .rail {
+  position: absolute; top: 13mm; right: 11mm; bottom: 13mm; width: 56mm;
+  background: var(--cream);
+  padding: 9mm 6.5mm;
+  display: flex; flex-direction: column;
+}
+.p1 .rail::before {           /* navy cap bar anchors the panel */
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 2.2mm; background: var(--navy);
+}
+.p1 .rail__logo { width: 33mm; margin: 1mm auto 0; display: block; }
+.p1 .rail__hr { height: .3mm; background: var(--gold); margin: 6mm 0 4mm; }
+.p1 .rail__who {
+  text-align: center; font-size: 7.4pt; line-height: 1.5; color: var(--navy);
+}
+.p1 .rail__who strong { display: block; font-size: 8.6pt; letter-spacing: .01em; }
+.p1 .rail__who span { color: var(--navy-55); }
+.p1 .rail__blk { margin-top: 7mm; }
+.p1 .rail__blk .lbl { display: block; margin-bottom: 2.2mm; }
+.p1 .rail__row { margin-bottom: 2.4mm; }
+.p1 .rail__row .k {
+  font-family: var(--sans); font-size: 5.4pt; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--navy-55); display: block;
+}
+.p1 .rail__row .v { font-size: 7pt; color: var(--navy); line-height: 1.3; }
+.p1 .rail__off { margin-bottom: 3.6mm; }
+.p1 .rail__off .city { display: block; margin-bottom: .8mm; }
+.p1 .rail__off .addr { font-size: 6.8pt; }
+.p1 .rail__pa { margin-top: auto; padding-top: 6mm; border-top: .3mm solid rgba(27,46,91,.18); }
+.p1 .rail__pa .lbl { display: block; margin-bottom: 2.2mm; }
+.p1 .rail__pa .v { font-size: 7pt; line-height: 1.7; color: var(--navy-70); }
+.p1 .rail__pa .v i { color: var(--gold); font-style: normal; }
+.p1 .body { position: absolute; left: 20mm; top: 32mm; width: 114mm; }
+
+/* ============================================================
+   ITERATION 2 — RIGHT MASTHEAD
+   Full-width header, everything ranged right. Logo over a
+   contact stack; the three chambers carry the footer.
+   ============================================================ */
+.p2 .head { position: absolute; top: 16mm; left: 20mm; right: 20mm; text-align: right; }
+.p2 .head__logo { width: 74mm; display: inline-block; }
+.p2 .head__who {
+  margin-top: 3.4mm;
+  font-family: var(--sans); font-size: 6.4pt; font-weight: 700;
+  letter-spacing: .17em; text-transform: uppercase; color: var(--navy);
+}
+.p2 .head__sub { margin-top: 1.4mm; font-size: 7.6pt; font-style: italic; color: var(--navy-55); }
+.p2 .head__contact { margin-top: 4.5mm; font-size: 7.8pt; line-height: 1.62; color: var(--navy); }
+.p2 .head__contact .k {
+  font-family: var(--sans); font-size: 5.4pt; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--gold); margin-right: 2mm;
+}
+.p2 .head__rule { margin-top: 5.5mm; height: .5mm; background: var(--navy); }
+.p2 .head__rule2 { margin-top: .9mm; height: .25mm; background: var(--gold); }
+.p2 .body { position: absolute; left: 20mm; top: 76mm; width: 170mm; }
+
+.p2 .foot { position: absolute; left: 20mm; right: 20mm; bottom: 13mm; }
+.p2 .foot__rule { height: .25mm; background: var(--rule); margin-bottom: 3.6mm; }
+.p2 .foot__grid { display: flex; gap: 8mm; }
+.p2 .foot__grid > div { flex: 1; }
+.p2 .foot__grid .city { display: block; margin-bottom: 1.2mm; }
+.p2 .foot__grid .city .star { color: var(--gold); }
+.p2 .foot__band {
+  margin-top: 4mm; background: var(--navy); padding: 2.2mm 4mm;
+  font-family: var(--sans); font-size: 5.8pt; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: #FFFDF9;
+  text-align: center;
+}
+.p2 .foot__band .sep { color: var(--gold); margin: 0 1.6mm; }
+
+/* ============================================================
+   ITERATION 3 — CORNER BLOCK & SPINE
+   Compact identity in the top-right corner, a hairline spine
+   down the right margin, and a reversed chambers band at foot.
+   ============================================================ */
+.p3 .spine { position: absolute; right: 13mm; top: 82mm; bottom: 46mm; width: .5mm; background: rgba(184,151,58,.45); }
+.p3 .head { position: absolute; top: 16mm; right: 20mm; text-align: right; width: 96mm; }
+.p3 .head__logo { width: 66mm; display: inline-block; }
+.p3 .head__who {
+  margin-top: 3mm; font-size: 8.4pt; color: var(--navy); line-height: 1.5;
+}
+.p3 .head__who b { font-weight: bold; }
+.p3 .head__who i { font-style: italic; color: var(--navy-55); }
+.p3 .head__hr { margin: 3.4mm 0 3.2mm; height: .25mm; background: var(--gold); }
+.p3 .head__c { font-size: 7.6pt; line-height: 1.66; color: var(--navy); }
+.p3 .head__c .k {
+  font-family: var(--sans); font-size: 5.2pt; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--navy-55); margin-right: 1.8mm;
+}
+.p3 .body { position: absolute; left: 20mm; top: 82mm; width: 168mm; }
+
+.p3 .foot { position: absolute; left: 20mm; right: 20mm; bottom: 13mm; }
+.p3 .foot__band { background: var(--navy); color: #FFFDF9; padding: 4.2mm 6mm; display: flex; gap: 7mm; }
+.p3 .foot__band > div { flex: 1; }
+.p3 .foot__band .city {
+  color: #FFFDF9; display: block; margin-bottom: 1.2mm; font-size: 6.4pt;
+}
+.p3 .foot__band .city .star { color: var(--gold); }
+.p3 .foot__band .addr { color: rgba(255,253,249,.74); font-size: 6.8pt; }
+.p3 .foot__pa {
+  margin-top: 2.8mm; text-align: center;
+  font-family: var(--sans); font-size: 5.4pt; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--navy-55);
+}
+.p3 .foot__pa .sep { color: var(--gold); margin: 0 1.4mm; }
+
+/* ============================================================
+   THE COMPACT SET — 4, 5, 6
+   One Delhi chamber, no footer, and a header short enough to
+   leave the sheet mostly paper.
+   ============================================================ */
+.pc .head { position: absolute; top: 16mm; left: 20mm; right: 20mm; text-align: right; }
+.pc .body { position: absolute; left: 20mm; right: 20mm; }
+.pc .d { color: var(--gold); margin: 0 1.4mm; font-style: normal; }
+.pc .who {
+  font-family: var(--sans); font-size: 6pt; font-weight: 700;
+  letter-spacing: .17em; text-transform: uppercase; color: var(--navy);
+}
+.pc .sub { font-size: 7pt; font-style: italic; color: var(--navy-55); }
+
+.p4 .head__logo { width: 48mm; }
+.p4 .who { margin-top: 3.6mm; }
+.p4 .sub { margin-top: 1mm; }
+.p4 .hr { margin-top: 2.4mm; height: .25mm; background: var(--gold); }
+.p4 .addr { margin-top: 2.2mm; font-size: 7.5pt; color: var(--navy); }
+.p4 .cts { margin-top: .8mm; font-size: 7.5pt; color: var(--navy); }
+.p4 .rule { margin-top: 2.6mm; height: .45mm; background: var(--navy); }
+.p4 .body { top: 64mm; }
+
+.p5 .head__logo { width: 52mm; }
+.p5 .bracket {
+  margin: 3.4mm 0 0 70mm; padding-left: 4mm;
+  border-left: .45mm solid var(--gold); text-align: left;
+}
+.p5 .bracket .sub { margin-top: 1.2mm; }
+.p5 .bracket .addr { margin-top: 2.6mm; font-size: 7.5pt; color: var(--navy); }
+.p5 .bracket .cts { margin-top: 1.8mm; font-size: 7.5pt; color: var(--navy); line-height: 1.5; }
+.p5 .body { top: 64mm; }
+
+.p6 .head__logo { width: 44mm; }
+.p6 .hr { margin-top: 3.4mm; height: .25mm; background: var(--gold); }
+.p6 .who2 { margin-top: 2.6mm; font-size: 7pt; color: var(--navy); }
+.p6 .cts { margin-top: .7mm; font-size: 7pt; color: var(--navy-70); }
+.p6 .body { top: 46mm; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ ITERATION 1 — THE RAIL ══════════════ -->
+<div class="page p1" id="page-1">
+  <div class="tag">Iteration 1 · The Rail</div>
+
+  <aside class="rail">
+    <img class="rail__logo" src="assets/logo-stacked-navy.png" alt="RAA" />
+    <div class="rail__hr"></div>
+    <div class="rail__who">
+      <strong>Rakesh Agarwal, IRS</strong>
+      Advocate &amp; Advisor<br />
+      <span>Customs &amp; Indirect Tax</span><br />
+      <span>Joint Commissioner (Retd.)</span>
+    </div>
+
+    <div class="rail__blk">
+      <span class="lbl">Contact</span>
+      <div class="rail__row"><span class="k">Mobile</span><span class="v">+91 98188 30557</span></div>
+      <div class="rail__row"><span class="k">Chambers</span><span class="v">011 4057 1716</span></div>
+      <div class="rail__row"><span class="k">Email</span><span class="v">rakeshagarwal.irs@gmail.com</span></div>
+      <div class="rail__row"><span class="k">Web</span><span class="v">rakeshagarwaladvocates.com</span></div>
+    </div>
+
+    <div class="rail__blk">
+      <span class="lbl">Chambers</span>
+      <div class="rail__off">
+        <span class="city">New Delhi</span>
+        <div class="addr">65, Jai Apartment, 102,<br />I.P. Extension, Patparganj<br />New Delhi — 110092</div>
+      </div>
+      <div class="rail__off">
+        <span class="city">Agra</span>
+        <div class="addr">5/7/2/B-3, Kaveri Center<br />Sanjay Palace<br />Agra — 282002</div>
+      </div>
+      <div class="rail__off">
+        <span class="city">Bangalore</span>
+        <div class="addr">8, 21st Main, 9th Cross<br />Indiranagar 1st Stage<br />Bangalore — 560038</div>
+      </div>
+    </div>
+
+    <div class="rail__pa">
+      <span class="lbl">Practice</span>
+      <div class="v">GST <i>·</i> Customs <i>·</i> CHA <i>·</i> Central Excise <i>·</i> Service Tax <i>·</i> Export Promotion Schemes <i>·</i> EOU <i>·</i> SEZ <i>·</i> PMLA <i>·</i> DRT</div>
+    </div>
+
+  </aside>
+
+  <div class="body letter">
+    <div class="meta">4th September 2026</div>
+    <div class="to">
+      The Registrar<br />
+      Customs, Excise &amp; Service Tax Appellate Tribunal<br />
+      Principal Bench, West Block No. 2, R. K. Puram<br />
+      New Delhi — 110066
+    </div>
+    <div class="subj">Sub: Written submissions in Excise Appeal No. 51318 of 2025</div>
+    <p>Sir,</p>
+    <p>I am instructed to file the enclosed written submissions on behalf of the Appellant in the captioned matter, listed before the Division Bench on 18th September 2026.</p>
+    <p>The submissions address the single question referred by this Hon'ble Tribunal — whether credit availed on inputs consumed captively is liable to reversal where the resultant intermediate product is exempt at the stage of clearance. The Appellant respectfully relies upon the ratio of the Larger Bench in KEI Industries, and on the line of authority following it.</p>
+    <p>A paper-book in four volumes, paginated and indexed, is filed alongside. Copies have been served on the Respondent's Authorised Representative under acknowledgement, a receipt whereof is annexed at Annexure-A.</p>
+    <p>The Appellant seeks liberty to file further submissions should the Bench require assistance on any allied question.</p>
+    <div class="sign">
+      Yours faithfully,<br /><br /><br />
+      <span class="nm">Rakesh Agarwal</span><br />
+      <span class="rl">Advocate for the Appellant</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ITERATION 2 — RIGHT MASTHEAD ══════════════ -->
+<div class="page p2" id="page-2">
+  <div class="tag">Iteration 2 · Right Masthead</div>
+
+  <header class="head">
+    <img class="head__logo" src="assets/logo-horizontal-navy.png" alt="Rakesh Agarwal Advocates" />
+    <div class="head__who">Rakesh Agarwal, IRS &nbsp;·&nbsp; Advocate &amp; Advisor</div>
+    <div class="head__sub">Customs &amp; Indirect Tax &nbsp;·&nbsp; Joint Commissioner (Retd.)</div>
+    <div class="head__contact">
+      <span class="k">M</span>+91 98188 30557 &nbsp;&nbsp;<span class="k">T</span>011 4057 1716<br />
+      <span class="k">E</span>rakeshagarwal.irs@gmail.com &nbsp;&nbsp;<span class="k">W</span>www.rakeshagarwaladvocates.com
+    </div>
+    <div class="head__rule"></div>
+    <div class="head__rule2"></div>
+  </header>
+
+  <div class="body letter">
+    <div class="meta">4th September 2026</div>
+    <div class="to">
+      The Registrar<br />
+      Customs, Excise &amp; Service Tax Appellate Tribunal<br />
+      Principal Bench, West Block No. 2, R. K. Puram, New Delhi — 110066
+    </div>
+    <div class="subj">Sub: Written submissions in Excise Appeal No. 51318 of 2025</div>
+    <p>Sir,</p>
+    <p>I am instructed to file the enclosed written submissions on behalf of the Appellant in the captioned matter, listed before the Division Bench on 18th September 2026.</p>
+    <p>The submissions address the single question referred by this Hon'ble Tribunal — whether credit availed on inputs consumed captively is liable to reversal where the resultant intermediate product is exempt at the stage of clearance. The Appellant respectfully relies upon the ratio of the Larger Bench in KEI Industries, and on the line of authority following it.</p>
+    <p>A paper-book in four volumes, paginated and indexed, is filed alongside. Copies have been served on the Respondent's Authorised Representative under acknowledgement, a receipt whereof is annexed at Annexure-A. The Appellant seeks liberty to file further submissions should the Bench require assistance on any allied question.</p>
+    <div class="sign">
+      Yours faithfully,<br /><br /><br />
+      <span class="nm">Rakesh Agarwal</span><br />
+      <span class="rl">Advocate for the Appellant</span>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="foot__rule"></div>
+    <div class="foot__grid">
+      <div>
+        <span class="city"><span class="star">★</span> New Delhi</span>
+        <div class="addr">65, Jai Apartment, 102, I.P. Extension,<br />Patparganj, New Delhi — 110092</div>
+      </div>
+      <div>
+        <span class="city">Agra</span>
+        <div class="addr">5/7/2/B-3, Kaveri Center,<br />Sanjay Palace, Agra — 282002</div>
+      </div>
+      <div>
+        <span class="city">Bangalore</span>
+        <div class="addr">8, 21st Main, 9th Cross, Indiranagar<br />1st Stage, Bangalore — 560038</div>
+      </div>
+    </div>
+    <div class="foot__band">
+      GST<span class="sep">·</span>Customs<span class="sep">·</span>CHA<span class="sep">·</span>Central Excise<span class="sep">·</span>Service Tax<span class="sep">·</span>Export Promotion Schemes<span class="sep">·</span>EOU<span class="sep">·</span>SEZ<span class="sep">·</span>PMLA<span class="sep">·</span>DRT
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════ ITERATION 3 — CORNER BLOCK & SPINE ══════════════ -->
+<div class="page p3" id="page-3">
+  <div class="tag">Iteration 3 · Corner Block &amp; Spine</div>
+
+  <div class="spine"></div>
+
+
+  <header class="head">
+    <img class="head__logo" src="assets/logo-horizontal-navy.png" alt="Rakesh Agarwal Advocates" />
+    <div class="head__who">
+      <b>Rakesh Agarwal, IRS</b> &nbsp;·&nbsp; Advocate &amp; Advisor<br />
+      <i>Customs &amp; Indirect Tax &nbsp;·&nbsp; Joint Commissioner (Retd.)</i>
+    </div>
+    <div class="head__hr"></div>
+    <div class="head__c">
+      <span class="k">Mobile</span>+91 98188 30557<br />
+      <span class="k">Chambers</span>011 4057 1716<br />
+      <span class="k">Email</span>rakeshagarwal.irs@gmail.com<br />
+      <span class="k">Web</span>www.rakeshagarwaladvocates.com
+    </div>
+  </header>
+
+  <div class="body letter">
+    <div class="meta">4th September 2026</div>
+    <div class="to">
+      The Registrar<br />
+      Customs, Excise &amp; Service Tax Appellate Tribunal<br />
+      Principal Bench, West Block No. 2, R. K. Puram, New Delhi — 110066
+    </div>
+    <div class="subj">Sub: Written submissions in Excise Appeal No. 51318 of 2025</div>
+    <p>Sir,</p>
+    <p>I am instructed to file the enclosed written submissions on behalf of the Appellant in the captioned matter, listed before the Division Bench on 18th September 2026.</p>
+    <p>The submissions address the single question referred by this Hon'ble Tribunal — whether credit availed on inputs consumed captively is liable to reversal where the resultant intermediate product is exempt at the stage of clearance. The Appellant respectfully relies upon the ratio of the Larger Bench in KEI Industries, and on the line of authority following it.</p>
+    <p>A paper-book in four volumes, paginated and indexed, is filed alongside. Copies have been served on the Respondent's Authorised Representative under acknowledgement, a receipt whereof is annexed at Annexure-A.</p>
+    <div class="sign">
+      Yours faithfully,<br /><br /><br />
+      <span class="nm">Rakesh Agarwal</span><br />
+      <span class="rl">Advocate for the Appellant</span>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="foot__band">
+      <div>
+        <span class="city"><span class="star">★</span> New Delhi</span>
+        <div class="addr">65, Jai Apartment, 102, I.P. Extension, Patparganj — 110092</div>
+      </div>
+      <div>
+        <span class="city">Agra</span>
+        <div class="addr">5/7/2/B-3, Kaveri Center, Sanjay Palace — 282002</div>
+      </div>
+      <div>
+        <span class="city">Bangalore</span>
+        <div class="addr">8, 21st Main, 9th Cross, Indiranagar 1st Stage — 560038</div>
+      </div>
+    </div>
+    <div class="foot__pa">
+      GST<span class="sep">·</span>Customs<span class="sep">·</span>CHA<span class="sep">·</span>Central Excise<span class="sep">·</span>Service Tax<span class="sep">·</span>EOU &amp; SEZ<span class="sep">·</span>PMLA<span class="sep">·</span>DRT
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════ ITERATION 4 — COMPACT STACK ══════════════ -->
+<div class="page pc p4" id="page-4">
+  <div class="tag">Iteration 4 · Compact Stack</div>
+  <header class="head">
+    <img class="head__logo" src="assets/logo-horizontal-navy.png" alt="Rakesh Agarwal Advocates" />
+    <div class="who">Rakesh Agarwal, IRS <i class="d">·</i> Advocate &amp; Advisor</div>
+    <div class="sub">Customs &amp; Indirect Tax <i class="d">·</i> Joint Commissioner (Retd.)</div>
+    <div class="hr"></div>
+    <div class="addr">65, Jai Apartment, 102, I.P. Extension, Patparganj, New Delhi — 110092</div>
+    <div class="cts">+91 98188 30557 <i class="d">·</i> 011 4057 1716 <i class="d">·</i> rakeshagarwal.irs@gmail.com <i class="d">·</i> www.rakeshagarwaladvocates.com</div>
+    <div class="rule"></div>
+  </header>
+  <div class="body letter">
+    <div class="meta">4th September 2026</div>
+    <div class="to">
+      The Registrar<br />
+      Customs, Excise &amp; Service Tax Appellate Tribunal<br />
+      Principal Bench, West Block No. 2, R. K. Puram, New Delhi — 110066
+    </div>
+    <div class="subj">Sub: Written submissions in Excise Appeal No. 51318 of 2025</div>
+    <p>Sir,</p>
+    <p>I am instructed to file the enclosed written submissions on behalf of the Appellant in the captioned matter, listed before the Division Bench on 18th September 2026.</p>
+    <p>The submissions address the single question referred by this Hon'ble Tribunal — whether credit availed on inputs consumed captively is liable to reversal where the resultant intermediate product is exempt at the stage of clearance. The Appellant respectfully relies upon the ratio of the Larger Bench in KEI Industries, and on the line of authority following it.</p>
+    <p>A paper-book in four volumes, paginated and indexed, is filed alongside. Copies have been served on the Respondent's Authorised Representative under acknowledgement, a receipt whereof is annexed at Annexure-A.</p>
+    <div class="sign">
+      Yours faithfully,<br /><br /><br />
+      <span class="nm">Rakesh Agarwal</span><br />
+      <span class="rl">Advocate for the Appellant</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ITERATION 5 — BRACKET ══════════════ -->
+<div class="page pc p5" id="page-5">
+  <div class="tag">Iteration 5 · Bracket</div>
+  <header class="head">
+    <img class="head__logo" src="assets/logo-horizontal-navy.png" alt="Rakesh Agarwal Advocates" />
+    <div class="bracket">
+      <div class="who">Rakesh Agarwal, IRS <i class="d">·</i> Advocate &amp; Advisor</div>
+      <div class="sub">Customs &amp; Indirect Tax <i class="d">·</i> Joint Commissioner (Retd.)</div>
+      <div class="addr">65, Jai Apartment, 102, I.P. Extension, Patparganj, New Delhi — 110092</div>
+      <div class="cts">+91 98188 30557 <i class="d">·</i> 011 4057 1716 <i class="d">·</i> rakeshagarwal.irs@gmail.com<br />www.rakeshagarwaladvocates.com</div>
+    </div>
+  </header>
+  <div class="body letter">
+    <div class="meta">4th September 2026</div>
+    <div class="to">
+      The Registrar<br />
+      Customs, Excise &amp; Service Tax Appellate Tribunal<br />
+      Principal Bench, West Block No. 2, R. K. Puram, New Delhi — 110066
+    </div>
+    <div class="subj">Sub: Written submissions in Excise Appeal No. 51318 of 2025</div>
+    <p>Sir,</p>
+    <p>I am instructed to file the enclosed written submissions on behalf of the Appellant in the captioned matter, listed before the Division Bench on 18th September 2026.</p>
+    <p>The submissions address the single question referred by this Hon'ble Tribunal — whether credit availed on inputs consumed captively is liable to reversal where the resultant intermediate product is exempt at the stage of clearance. The Appellant respectfully relies upon the ratio of the Larger Bench in KEI Industries, and on the line of authority following it.</p>
+    <p>A paper-book in four volumes, paginated and indexed, is filed alongside. Copies have been served on the Respondent's Authorised Representative under acknowledgement, a receipt whereof is annexed at Annexure-A.</p>
+    <div class="sign">
+      Yours faithfully,<br /><br /><br />
+      <span class="nm">Rakesh Agarwal</span><br />
+      <span class="rl">Advocate for the Appellant</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ITERATION 6 — HAIRLINE ══════════════ -->
+<div class="page pc p6" id="page-6">
+  <div class="tag">Iteration 6 · Hairline</div>
+  <header class="head">
+    <img class="head__logo" src="assets/logo-horizontal-navy.png" alt="Rakesh Agarwal Advocates" />
+    <div class="hr"></div>
+    <div class="who2">Rakesh Agarwal, IRS <i class="d">·</i> Advocate &amp; Advisor <i class="d">·</i> Customs &amp; Indirect Tax <i class="d">·</i> Joint Commissioner (Retd.)</div>
+    <div class="cts">65, Jai Apartment, 102, I.P. Extension, Patparganj, New Delhi — 110092 <i class="d">·</i> +91 98188 30557 <i class="d">·</i> rakeshagarwal.irs@gmail.com</div>
+  </header>
+  <div class="body letter">
+    <div class="meta">4th September 2026</div>
+    <div class="to">
+      The Registrar<br />
+      Customs, Excise &amp; Service Tax Appellate Tribunal<br />
+      Principal Bench, West Block No. 2, R. K. Puram, New Delhi — 110066
+    </div>
+    <div class="subj">Sub: Written submissions in Excise Appeal No. 51318 of 2025</div>
+    <p>Sir,</p>
+    <p>I am instructed to file the enclosed written submissions on behalf of the Appellant in the captioned matter, listed before the Division Bench on 18th September 2026.</p>
+    <p>The submissions address the single question referred by this Hon'ble Tribunal — whether credit availed on inputs consumed captively is liable to reversal where the resultant intermediate product is exempt at the stage of clearance. The Appellant respectfully relies upon the ratio of the Larger Bench in KEI Industries, and on the line of authority following it.</p>
+    <p>A paper-book in four volumes, paginated and indexed, is filed alongside. Copies have been served on the Respondent's Authorised Representative under acknowledgement, a receipt whereof is annexed at Annexure-A.</p>
+    <div class="sign">
+      Yours faithfully,<br /><br /><br />
+      <span class="nm">Rakesh Agarwal</span><br />
+      <span class="rl">Advocate for the Appellant</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
