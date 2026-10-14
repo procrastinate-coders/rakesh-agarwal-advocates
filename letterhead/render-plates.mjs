@@ -84,7 +84,7 @@ const RAIL_HTML = (logoDataUri) => `
     <strong>Rakesh Agarwal, IRS</strong>
     Advocate &amp; Advisor<br />
     <span>Customs &amp; Indirect Tax</span><br />
-    <span>Joint Commissioner (Retd.)</span>
+    <span>Additional Commissioner (Retd.)</span>
   </div>
 
   <div class="blk">
@@ -118,7 +118,7 @@ async function plate(file, html, css, scale) {
   await p.setContent(`<style>${css}</style>${html}`, { waitUntil: 'networkidle0' });
   await p.evaluate(() => document.fonts.ready);
   const el = await p.$('#s');
-  const buf = await el.screenshot({ omitBackground: true });
+  const buf = Buffer.from(await el.screenshot({ omitBackground: true }));
   writeFileSync(resolve(dir, file), buf);
   console.log(`${file.padEnd(20)} ${buf.readUInt32BE(16)}x${buf.readUInt32BE(20)}px`);
   await p.close();

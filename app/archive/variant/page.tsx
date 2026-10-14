@@ -15,11 +15,11 @@ import BentoCaseLedger from '@/components/archive/variant/BentoCaseLedger';
 export const metadata: Metadata = {
   title: 'Rakesh Agarwal — Advocate & Advisor',
   description:
-    'Customs & Indirect Tax | Joint Commissioner (Rtd.) | GST, Customs, CHA, Central Excise, Service Tax, EOU, SEZ, PMLA, DRT',
+    'Customs & Indirect Tax | Additional Commissioner (Rtd.) | GST, Customs, CHA, Central Excise, Service Tax, EOU, SEZ, PMLA, DRT',
   openGraph: {
     title: 'Rakesh Agarwal — Advocate & Advisor',
     description:
-      'Customs & Indirect Tax | Joint Commissioner (Rtd.) | CESTAT Practitioner',
+      'Customs & Indirect Tax | Additional Commissioner (Rtd.) | CESTAT Practitioner',
     images: [{ url: '/og-card.png', width: 1200, height: 630 }],
   },
 };
@@ -59,7 +59,7 @@ export default function Variant() {
             </h1>
             <p className="bento-hero__sub">
               Customs &amp; Indirect Tax<br />
-              Joint Commissioner (Retd.)
+              Additional Commissioner (Retd.)
             </p>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function Variant() {
         <div id="about" className="bento-card bento-card--3x2 bento-about">
           <div className="bento-section-label">01 &mdash; Biography</div>
           <p className="bento-about__text">
-            Rakesh Agarwal joined the Indian Revenue Service on recommendation by the UPSC as a Direct Recruit Superintendent (Technical) and retired as Joint Commissioner Group A, IRS (C&amp;IT), 2012 Batch. His final posting was as Department Representative (Counsel) in CESTAT, arguing landmark matters involving high stakes of revenue.
+            Rakesh Agarwal joined the Indian Revenue Service on recommendation by the UPSC as a Direct Recruit Superintendent (Technical) and retired as Additional Commissioner Group A, IRS (C&amp;IT), 2012 Batch. His final posting was as Department Representative (Counsel) in CESTAT, arguing landmark matters involving high stakes of revenue.
           </p>
           <p className="bento-about__text">
             His career spans field experience in Belgaum and Bangalore, foreign trade policy at DGEP, intelligence and investigation at DRI New Delhi, GST policy coordination at CBIC and the GST Council Secretariat, and five years of litigation before CESTAT.
@@ -144,7 +144,7 @@ export default function Variant() {
             <div className="bento-editorial__attr">
               <div className="bento-editorial__name">Rakesh Agarwal</div>
               <div className="bento-editorial__role">
-                Former Joint Commissioner, IRS (C&amp;IT)<br />
+                Former Additional Commissioner, IRS (C&amp;IT)<br />
                 Department Representative, CESTAT
               </div>
             </div>

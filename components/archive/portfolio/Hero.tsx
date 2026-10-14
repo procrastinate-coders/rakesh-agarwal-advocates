@@ -37,7 +37,7 @@ export default function Hero() {
             </div>
             <div className="hero__avatar-info">
               Rakesh Agarwal
-              <span>Joint Commissioner (Retd.) &middot; IRS (C&amp;IT)</span>
+              <span>Additional Commissioner (Retd.) &middot; IRS (C&amp;IT)</span>
             </div>
           </div>
           <div className="hero__stats">

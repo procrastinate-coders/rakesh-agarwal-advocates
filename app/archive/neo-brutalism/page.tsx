@@ -14,10 +14,10 @@ import CaseLedgerTable from '@/components/shared/CaseLedgerTable';
 
 export const metadata: Metadata = {
   title: 'Rakesh Agarwal — Advocate & Advisor',
-  description: 'Customs & Indirect Tax | Joint Commissioner (Rtd.)',
+  description: 'Customs & Indirect Tax | Additional Commissioner (Rtd.)',
   openGraph: {
     title: 'Rakesh Agarwal — Advocate & Advisor',
-    description: 'Customs & Indirect Tax | Joint Commissioner (Rtd.) | CESTAT Practitioner',
+    description: 'Customs & Indirect Tax | Additional Commissioner (Rtd.) | CESTAT Practitioner',
     images: [{ url: '/og-card.png', width: 1200, height: 630 }],
   },
 };
@@ -47,7 +47,7 @@ export default function NeoBrutalism() {
             <div className="nb-hero__tag">ADVOCATE &amp; ADVISOR</div>
             <h1 className="nb-hero__name">RAKESH<br />AGARWAL</h1>
             <div className="nb-hero__irs"><em>IRS</em></div>
-            <p className="nb-hero__sub">CUSTOMS &amp; INDIRECT TAX<br />JOINT COMMISSIONER (RETD.)</p>
+            <p className="nb-hero__sub">CUSTOMS &amp; INDIRECT TAX<br />ADDITIONAL COMMISSIONER (RETD.)</p>
           </div>
           <div className="nb-hero__photo">
             <Image src="/assets/PP-RA_Advocate.jpg" alt="Rakesh Agarwal" width={413} height={532} className="nb-hero__img" sizes="(max-width: 768px) 100vw, 420px" priority />
@@ -83,14 +83,14 @@ export default function NeoBrutalism() {
       <section id="about" className="nb-about">
         <div className="nb-about__body">
           <div className="nb-section-tag">01 &mdash; BIOGRAPHY</div>
-          <p>Rakesh Agarwal joined the Indian Revenue Service on recommendation by the UPSC as a Direct Recruit Superintendent (Technical) and retired as Joint Commissioner Group A, IRS (C&amp;IT), 2012 Batch. His final posting was as Department Representative (Counsel) in CESTAT, arguing landmark matters involving high stakes of revenue.</p>
+          <p>Rakesh Agarwal joined the Indian Revenue Service on recommendation by the UPSC as a Direct Recruit Superintendent (Technical) and retired as Additional Commissioner Group A, IRS (C&amp;IT), 2012 Batch. His final posting was as Department Representative (Counsel) in CESTAT, arguing landmark matters involving high stakes of revenue.</p>
           <p>His career spans field experience in Belgaum and Bangalore, foreign trade policy at DGEP, intelligence and investigation at DRI New Delhi, GST policy coordination at CBIC and the GST Council Secretariat, and five years of litigation before CESTAT.</p>
           <p>Now enrolled as an Advocate with the Delhi Bar Council after passing the All India Bar Examination, he brings three decades of institutional knowledge to a practice built on a simple view: a well-drafted brief and a Tribunal that trusts the counsel in front of it.</p>
         </div>
         <div className="nb-about__quote">
           <div className="nb-about__mark">&ldquo;</div>
           <blockquote>A well-drafted brief is half the argument won.</blockquote>
-          <cite>Rakesh Agarwal<br />Former Joint Commissioner, IRS (C&amp;IT)</cite>
+          <cite>Rakesh Agarwal<br />Former Additional Commissioner, IRS (C&amp;IT)</cite>
         </div>
       </section>
 

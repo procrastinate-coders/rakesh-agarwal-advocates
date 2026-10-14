@@ -22,10 +22,10 @@ import {
 
 export const metadata: Metadata = {
   title: 'Rakesh Agarwal — Advocate & Advisor',
-  description: 'Customs & Indirect Tax | Joint Commissioner (Rtd.)',
+  description: 'Customs & Indirect Tax | Additional Commissioner (Rtd.)',
   openGraph: {
     title: 'Rakesh Agarwal — Advocate & Advisor',
-    description: 'Customs & Indirect Tax | Joint Commissioner (Rtd.) | CESTAT Practitioner',
+    description: 'Customs & Indirect Tax | Additional Commissioner (Rtd.) | CESTAT Practitioner',
     images: [{ url: '/og-card.png', width: 1200, height: 630 }],
   },
 };

@@ -22,14 +22,14 @@ export default function AboutSection() {
                 width={500}
                 height={667}
               />
-              <div className="about__portrait-tag">Joint Commissioner &middot; IRS</div>
+              <div className="about__portrait-tag">Additional Commissioner &middot; IRS</div>
             </ScrollReveal>
           </div>
 
           <div>
             <div className="about__prose">
               <ScrollReveal>
-                <p>Rakesh Agarwal joined the Indian Revenue Service on recommendation by the UPSC as a Direct Recruit Superintendent (Technical) and retired as Joint Commissioner Group A, IRS (C&amp;IT), 2012 Batch. His final posting was as Department Representative (Counsel) in CESTAT, arguing landmark matters involving high stakes of revenue.</p>
+                <p>Rakesh Agarwal joined the Indian Revenue Service on recommendation by the UPSC as a Direct Recruit Superintendent (Technical) and retired as Additional Commissioner Group A, IRS (C&amp;IT), 2012 Batch. His final posting was as Department Representative (Counsel) in CESTAT, arguing landmark matters involving high stakes of revenue.</p>
               </ScrollReveal>
               <ScrollReveal>
                 <p>His career spans field experience in Belgaum and Bangalore, foreign trade policy formulation at DGEP, intelligence and investigation at DRI New Delhi, GST policy coordination at CBIC and the GST Council Secretariat, and five years of litigation before CESTAT at New Delhi, Chandigarh, and Bangalore.</p>
@@ -43,7 +43,7 @@ export default function AboutSection() {
               <dl className="about__credentials">
                 <div className="about__cred">
                   <dt>Service</dt>
-                  <dd>Indian Revenue Service<br /><em>Joint Commissioner (Retd.)</em></dd>
+                  <dd>Indian Revenue Service<br /><em>Additional Commissioner (Retd.)</em></dd>
                 </div>
                 <div className="about__cred">
                   <dt>Enrollment</dt>

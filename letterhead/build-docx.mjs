@@ -64,7 +64,7 @@ const D = {
   name: 'Rakesh Agarwal, IRS',
   role: 'Advocate & Advisor',
   dept: 'Customs & Indirect Tax',
-  cred: 'Joint Commissioner (Retd.)',
+  cred: 'Additional Commissioner (Retd.)',
   mobile: '+91 98188 30557',
   chambers: '011 4057 1716',
   email: 'rakeshagarwal.irs@gmail.com',

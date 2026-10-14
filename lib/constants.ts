@@ -7,7 +7,7 @@ export const SITE = {
   name: 'Rakesh Agarwal',
   suffix: 'IRS',
   tagline: 'Advocate & Advisor',
-  subtitle: 'Customs & Indirect Tax — Joint Commissioner (Retd.)',
+  subtitle: 'Customs & Indirect Tax — Additional Commissioner (Retd.)',
   copyright: '© MMXXVI Rakesh Agarwal, Advocates',
 } as const;
 
@@ -88,7 +88,7 @@ export const NAV_LINKS = [
 ] as const;
 
 export const ABOUT_BIO = [
-  'Rakesh Agarwal joined the Indian Revenue Service (IRS) on recommendation by the UPSC as a Direct Recruit Superintendent (Technical) and retired as Joint Commissioner Group A, IRS (C&IT), 2012 Batch. His final posting was as Authorised Representative (Department Counsel) in CESTAT, arguing landmark matters involving high stakes of revenue.',
+  'Rakesh Agarwal joined the Indian Revenue Service (IRS) on recommendation by the UPSC as a Direct Recruit Superintendent (Technical) and retired as Additional Commissioner Group A, IRS (C&IT), 2012 Batch. His final posting was as Authorised Representative (Department Counsel) in CESTAT, arguing landmark matters involving high stakes of revenue.',
   'His career spans field experience in Belgaum and Bangalore, EOU, SEZ & Foreign Trade Policy at DGEP, intelligence and investigation at DRI New Delhi, EOU & SEZ operations at NSEZ, GST policy wing at CBIC & the GST Council Secretariat; and five years of litigation before CESTAT.',
   'Enrolled as an Advocate with the Delhi Bar Council after passing the All India Bar Examination & practicing as a tax advocate.',
 ] as const;
