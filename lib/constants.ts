@@ -4,6 +4,7 @@
    ────────────────────────────────────────────────────── */
 
 export const SITE = {
+  url: 'https://www.rakeshagarwaladvocates.com',
   name: 'Rakesh Agarwal',
   suffix: 'IRS',
   tagline: 'Advocate & Advisor',

@@ -20,14 +20,9 @@ import {
   Footer,
 } from '@/components/home';
 
+// Title, description and Open Graph come from the root layout.
 export const metadata: Metadata = {
-  title: 'Rakesh Agarwal — Advocate & Advisor',
-  description: 'Customs & Indirect Tax | Additional Commissioner (Rtd.)',
-  openGraph: {
-    title: 'Rakesh Agarwal — Advocate & Advisor',
-    description: 'Customs & Indirect Tax | Additional Commissioner (Rtd.) | CESTAT Practitioner',
-    images: [{ url: '/og-card.png', width: 1200, height: 630 }],
-  },
+  alternates: { canonical: '/' },
 };
 
 export default function Home() {

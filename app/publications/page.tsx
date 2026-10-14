@@ -12,8 +12,18 @@ const NAV = [
 ];
 
 export const metadata: Metadata = {
-  title: `Publications — ${SITE.name}`,
-  description: 'Articles and papers on Customs, Indirect Tax & Jurisprudence.',
+  title: 'Publications on Customs, GST & Indirect Tax',
+  description:
+    'Articles by Rakesh Agarwal, IRS (Retd.), Advocate — on Customs law, GST, indirect taxation and tax jurisprudence.',
+  alternates: { canonical: '/publications' },
+  openGraph: {
+    type: 'website',
+    url: '/publications',
+    siteName: 'Rakesh Agarwal Advocates',
+    locale: 'en_IN',
+    title: 'Publications on Customs, GST & Indirect Tax — Rakesh Agarwal',
+    images: [{ url: '/og-card.png', width: 1200, height: 630 }],
+  },
 };
 
 export default function PublicationsPage() {

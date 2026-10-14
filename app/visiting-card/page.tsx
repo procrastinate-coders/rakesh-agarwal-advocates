@@ -13,8 +13,12 @@ export const metadata: Metadata = {
   title: 'Rakesh Agarwal, IRS — Digital Visiting Card',
   description:
     'Save contact, call, or email Rakesh Agarwal — Advocate & Advisor specializing in Customs & Indirect Tax. Additional Commissioner (Rtd.), IRS.',
+  alternates: { canonical: '/visiting-card' },
   openGraph: {
     type: 'profile',
+    url: '/visiting-card',
+    siteName: 'Rakesh Agarwal Advocates',
+    locale: 'en_IN',
     title: 'Rakesh Agarwal, IRS — Digital Visiting Card',
     description:
       'Save contact, call, or email Rakesh Agarwal — Advocate & Advisor specializing in Customs & Indirect Tax. Additional Commissioner (Rtd.), IRS.',

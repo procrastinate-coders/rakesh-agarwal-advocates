@@ -8,17 +8,21 @@ import {
   inter,
   manrope,
 } from '@/lib/fonts';
+import { SITE, BAR_ENROLMENT } from '@/lib/constants';
+import { contact } from '@/lib/data/contact';
+import { education } from '@/lib/data/education';
 
-const siteUrl = 'https://rakesh-agarwal-advocates.vercel.app';
+const siteUrl = SITE.url;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Rakesh Agarwal — Advocate & Advisor | Customs & Indirect Tax | IRS (Retd.)',
+    default: 'Rakesh Agarwal, IRS (Retd.) — Customs, GST & CESTAT Advocate | Delhi',
     template: '%s | Rakesh Agarwal Advocates',
   },
   description:
     'Rakesh Agarwal, IRS (Retd.) Additional Commissioner — Advocate specializing in Customs, GST, Central Excise, Service Tax, Foreign Trade, CESTAT litigation, EOU, SEZ, PMLA, DRT. 30+ years IRS experience. Delhi, Agra, Bangalore offices.',
+  applicationName: 'Rakesh Agarwal Advocates',
   keywords: [
     'Rakesh Agarwal Advocate',
     'Rakesh Agarwal IRS',
@@ -68,7 +72,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: siteUrl,
     siteName: 'Rakesh Agarwal Advocates',
-    title: 'Rakesh Agarwal — Advocate & Advisor | Customs & Indirect Tax',
+    title: 'Rakesh Agarwal, IRS (Retd.) — Customs, GST & CESTAT Advocate',
     description:
       'Customs & Indirect Tax | Additional Commissioner (Rtd.) | 30+ Years IRS | 45+ CESTAT Cases | GST, Customs, Central Excise, Service Tax, PMLA, DRT',
     images: [
@@ -82,7 +86,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rakesh Agarwal — Advocate & Advisor | Customs & Indirect Tax',
+    title: 'Rakesh Agarwal, IRS (Retd.) — Customs, GST & CESTAT Advocate',
     description:
       'Customs & Indirect Tax | Additional Commissioner (Rtd.) | 30+ Years IRS | CESTAT Practitioner',
     images: ['/og-card.png'],
@@ -98,94 +102,110 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: siteUrl,
-  },
+  // Canonical is set per page — a canonical here would be inherited by
+  // every route and point them all at the home page.
   category: 'Legal Services',
 };
+
+const PRACTICE = [
+  'Customs Law',
+  'GST',
+  'Central Excise',
+  'Service Tax',
+  'Foreign Trade Policy',
+  'CESTAT Litigation',
+  'EOU',
+  'SEZ',
+  'PMLA',
+  'DRT',
+  'CHA Licensing',
+  'Anti-Dumping',
+  'Export Promotion Schemes',
+];
+
+// Must match lib/data/offices.ts — search engines and AI assistants
+// cross-check name/address/phone across the web.
+const OFFICE_ADDRESSES = [
+  {
+    '@type': 'PostalAddress',
+    streetAddress: '65, Jai Apartment, 102, I.P. Extension, Patparganj',
+    addressLocality: 'New Delhi',
+    addressRegion: 'Delhi',
+    postalCode: '110092',
+    addressCountry: 'IN',
+  },
+  {
+    '@type': 'PostalAddress',
+    streetAddress: '5/7/2/B-3, Kaveri Center, Sanjay Palace',
+    addressLocality: 'Agra',
+    addressRegion: 'Uttar Pradesh',
+    postalCode: '282002',
+    addressCountry: 'IN',
+  },
+  {
+    '@type': 'PostalAddress',
+    streetAddress: '8, 21st Main, 9th Cross, Indiranagar 1st Stage',
+    addressLocality: 'Bangalore',
+    addressRegion: 'Karnataka',
+    postalCode: '560038',
+    addressCountry: 'IN',
+  },
+];
 
 // JSON-LD Structured Data
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Attorney',
-      '@id': `${siteUrl}/#attorney`,
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
       name: 'Rakesh Agarwal',
-      alternateName: 'Rakesh Agarwal IRS',
+      alternateName: ['Rakesh Agarwal IRS', 'Rakesh Agarwal, IRS (Retd.)', 'Advocate Rakesh Agarwal'],
       description:
         'Advocate specializing in Customs & Indirect Tax with 30+ years of IRS experience. Former Additional Commissioner and Department Representative at CESTAT.',
       url: siteUrl,
       image: `${siteUrl}/assets/PP-RA_Advocate.jpg`,
-      telephone: ['+91-9818830557', '011-40571716'],
-      email: 'rakeshagarwal.irs@gmail.com',
-      jobTitle: 'Advocate & Advisor',
+      telephone: [contact.mobile, '+91-11-40571716'],
+      email: contact.email,
+      jobTitle: 'Advocate & Advisor — Customs & Indirect Tax',
       honorificSuffix: 'IRS (Retd.)',
+      worksFor: { '@id': `${siteUrl}/#firm` },
       alumniOf: [
         { '@type': 'CollegeOrUniversity', name: 'National Academy of Customs, Indirect Taxes and Narcotics (NACIN)' },
+        ...education.map((e) => ({ '@type': 'CollegeOrUniversity', name: e.institution })),
       ],
-      knowsAbout: [
-        'Customs Law',
-        'GST',
-        'Central Excise',
-        'Service Tax',
-        'Foreign Trade Policy',
-        'CESTAT Litigation',
-        'EOU',
-        'SEZ',
-        'PMLA',
-        'DRT',
-        'CHA Licensing',
-        'Anti-Dumping',
-        'Export Promotion Schemes',
-      ],
+      hasCredential: {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Advocate enrolment',
+        identifier: BAR_ENROLMENT.number,
+        recognizedBy: { '@type': 'Organization', name: BAR_ENROLMENT.council },
+      },
+      memberOf: { '@type': 'Organization', name: BAR_ENROLMENT.council },
+      knowsAbout: PRACTICE,
+    },
+    {
+      '@type': 'LegalService',
+      '@id': `${siteUrl}/#firm`,
+      name: 'Rakesh Agarwal Advocates',
+      alternateName: 'RAA',
+      url: siteUrl,
+      description:
+        'Law practice specializing in Customs, GST, Indirect Tax, CESTAT litigation, Central Excise, Service Tax, Foreign Trade Policy, EOU, SEZ, PMLA and DRT matters.',
+      image: `${siteUrl}/og-card.png`,
+      logo: `${siteUrl}/og-card.png`,
+      telephone: contact.mobile,
+      email: contact.email,
+      priceRange: '₹₹₹',
+      address: OFFICE_ADDRESSES[0],
+      location: OFFICE_ADDRESSES.map((address) => ({ '@type': 'Place', address })),
+      founder: { '@id': `${siteUrl}/#person` },
       areaServed: [
         { '@type': 'City', name: 'New Delhi' },
         { '@type': 'City', name: 'Agra' },
         { '@type': 'City', name: 'Bangalore' },
         { '@type': 'Country', name: 'India' },
       ],
-      address: [
-        {
-          '@type': 'PostalAddress',
-          streetAddress: 'B9, 1st Apartment, 207 IP Extension, Patparganj',
-          addressLocality: 'New Delhi',
-          postalCode: '110092',
-          addressCountry: 'IN',
-        },
-        {
-          '@type': 'PostalAddress',
-          streetAddress: '5/7/2/B-3, Kaveri Center, Sanjay Palace',
-          addressLocality: 'Agra',
-          postalCode: '282002',
-          addressCountry: 'IN',
-        },
-        {
-          '@type': 'PostalAddress',
-          streetAddress: '8th, 21st Main, 9th Cross, Indiranagar 1st Stage',
-          addressLocality: 'Bangalore',
-          postalCode: '560038',
-          addressCountry: 'IN',
-        },
-      ],
-      memberOf: {
-        '@type': 'Organization',
-        name: 'Delhi Bar Council',
-      },
-    },
-    {
-      '@type': 'LegalService',
-      '@id': `${siteUrl}/#firm`,
-      name: 'Rakesh Agarwal Advocates',
-      url: siteUrl,
-      description:
-        'Law firm specializing in Customs, GST, Indirect Tax, CESTAT litigation, Central Excise, Service Tax, Foreign Trade Policy, EOU, SEZ, PMLA and DRT matters.',
-      image: `${siteUrl}/og-card.png`,
-      telephone: '+91-9818830557',
-      email: 'rakeshagarwal.irs@gmail.com',
-      priceRange: '₹₹₹',
-      founder: { '@id': `${siteUrl}/#attorney` },
-      areaServed: { '@type': 'Country', name: 'India' },
+      knowsAbout: PRACTICE,
       serviceType: [
         'Customs Law',
         'GST Advisory',
@@ -204,7 +224,10 @@ const jsonLd = {
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
       name: 'Rakesh Agarwal Advocates',
+      alternateName: ['Rakesh Agarwal, IRS', 'rakeshagarwaladvocates.com'],
+      inLanguage: 'en-IN',
       publisher: { '@id': `${siteUrl}/#firm` },
+      about: { '@id': `${siteUrl}/#person` },
     },
   ],
 };

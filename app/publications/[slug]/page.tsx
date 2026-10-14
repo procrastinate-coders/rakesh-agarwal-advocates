@@ -24,8 +24,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const pub = publications.find((p) => p.slug === slug);
   if (!pub) return {};
   return {
-    title: `${pub.title} — ${SITE.name}`,
-    description: pub.title,
+    title: pub.title,
+    description: `${pub.title} — an article by Rakesh Agarwal, IRS (Retd.), Advocate in Customs & Indirect Tax.`,
+    alternates: { canonical: `/publications/${pub.slug}` },
+    openGraph: {
+      type: 'article',
+      url: `/publications/${pub.slug}`,
+      siteName: 'Rakesh Agarwal Advocates',
+      locale: 'en_IN',
+      title: pub.title,
+      authors: ['Rakesh Agarwal'],
+      images: [{ url: '/og-card.png', width: 1200, height: 630 }],
+    },
   };
 }
 
@@ -34,8 +44,27 @@ export default async function PublicationPage({ params }: Props) {
   const pub = publications.find((p) => p.slug === slug);
   if (!pub) notFound();
 
+  const articleLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: pub.title,
+    url: `${SITE.url}/publications/${pub.slug}`,
+    author: { '@id': `${SITE.url}/#person` },
+    publisher: { '@id': `${SITE.url}/#firm` },
+    inLanguage: 'en-IN',
+    encoding: {
+      '@type': 'MediaObject',
+      contentUrl: encodeURI(`${SITE.url}${pub.file}`),
+      encodingFormat: 'application/pdf',
+    },
+  };
+
   return (
     <div className="gm-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
       <SubpageNav links={NAV} />
 
       <main className="gm-pub-viewer">
