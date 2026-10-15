@@ -14,10 +14,10 @@ import CaseLedgerTable from '@/components/shared/CaseLedgerTable';
 
 export const metadata: Metadata = {
   title: 'Rakesh Agarwal — Advocate & Advisor',
-  description: 'Customs & Indirect Tax | Additional Commissioner (Rtd.)',
+  description: 'Customs & Indirect Tax | Additional Commissioner (Retd.)',
   openGraph: {
     title: 'Rakesh Agarwal — Advocate & Advisor',
-    description: 'Customs & Indirect Tax | Additional Commissioner (Rtd.) | CESTAT Practitioner',
+    description: 'Customs & Indirect Tax | Additional Commissioner (Retd.) | CESTAT Practitioner',
     images: [{ url: '/og-card.png', width: 1200, height: 630 }],
   },
 };
@@ -90,7 +90,7 @@ export default function NeoBrutalism() {
         <div className="nb-about__quote">
           <div className="nb-about__mark">&ldquo;</div>
           <blockquote>A well-drafted brief is half the argument won.</blockquote>
-          <cite>Rakesh Agarwal<br />Former Additional Commissioner, IRS (C&amp;IT)</cite>
+          <cite>Rakesh Agarwal<br />Additional Commissioner (Retd.), IRS (C&amp;IT)</cite>
         </div>
       </section>
 

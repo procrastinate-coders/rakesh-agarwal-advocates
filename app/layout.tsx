@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: '%s | Rakesh Agarwal Advocates',
   },
   description:
-    'Rakesh Agarwal, IRS (Retd.) Additional Commissioner — Advocate specializing in Customs, GST, Central Excise, Service Tax, Foreign Trade, CESTAT litigation, EOU, SEZ, PMLA, DRT. 30+ years IRS experience. Delhi, Agra, Bangalore offices.',
+    'Rakesh Agarwal, IRS, Additional Commissioner (Retd.) — Advocate specializing in Customs, GST, Central Excise, Service Tax, Foreign Trade, CESTAT litigation, EOU, SEZ, PMLA, DRT. 30+ years IRS experience. Delhi, Agra, Bangalore offices.',
   applicationName: 'Rakesh Agarwal Advocates',
   keywords: [
     'Rakesh Agarwal Advocate',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     'PMLA Advocate Delhi',
     'DRT Advocate Delhi',
     'CHA Licensing Advocate',
-    'Additional Commissioner IRS Retired',
+    'Additional Commissioner (Retd.) IRS',
     'IRS Officer Advocate',
     'Department Representative CESTAT',
     'Customs Appeal Lawyer',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     siteName: 'Rakesh Agarwal Advocates',
     title: 'Rakesh Agarwal, IRS (Retd.) — Customs, GST & CESTAT Advocate',
     description:
-      'Customs & Indirect Tax | Additional Commissioner (Rtd.) | 30+ Years IRS | 45+ CESTAT Cases | GST, Customs, Central Excise, Service Tax, PMLA, DRT',
+      'Customs & Indirect Tax | Additional Commissioner (Retd.) | 30+ Years IRS | 45+ CESTAT Cases | GST, Customs, Central Excise, Service Tax, PMLA, DRT',
     images: [
       {
         url: '/og-card.png',
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Rakesh Agarwal, IRS (Retd.) — Customs, GST & CESTAT Advocate',
     description:
-      'Customs & Indirect Tax | Additional Commissioner (Rtd.) | 30+ Years IRS | CESTAT Practitioner',
+      'Customs & Indirect Tax | Additional Commissioner (Retd.) | 30+ Years IRS | CESTAT Practitioner',
     images: ['/og-card.png'],
   },
   robots: {
@@ -162,7 +162,7 @@ const jsonLd = {
       name: 'Rakesh Agarwal',
       alternateName: ['Rakesh Agarwal IRS', 'Rakesh Agarwal, IRS (Retd.)', 'Advocate Rakesh Agarwal'],
       description:
-        'Advocate specializing in Customs & Indirect Tax with 30+ years of IRS experience. Former Additional Commissioner and Department Representative at CESTAT.',
+        'Advocate specializing in Customs & Indirect Tax with 30+ years of IRS experience. Additional Commissioner (Retd.) and former Department Representative at CESTAT.',
       url: siteUrl,
       image: `${siteUrl}/assets/PP-RA_Advocate.jpg`,
       telephone: [contact.mobile, '+91-11-40571716'],

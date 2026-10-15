@@ -22,7 +22,7 @@ export default function ProfileSection() {
           </h1>
           <p className="identity__title">Advocate &amp; Advisor</p>
           <p className="identity__dept">Customs &amp; Indirect Tax</p>
-          <p className="identity__credential">Additional Commissioner (Rtd.)</p>
+          <p className="identity__credential">Additional Commissioner (Retd.)</p>
         </div>
       </CardScrollReveal>
     </>

@@ -12,7 +12,7 @@ import CardFooter from '@/components/card/CardFooter';
 export const metadata: Metadata = {
   title: 'Rakesh Agarwal, IRS — Digital Visiting Card',
   description:
-    'Save contact, call, or email Rakesh Agarwal — Advocate & Advisor specializing in Customs & Indirect Tax. Additional Commissioner (Rtd.), IRS.',
+    'Save contact, call, or email Rakesh Agarwal — Advocate & Advisor specializing in Customs & Indirect Tax. Additional Commissioner (Retd.), IRS.',
   alternates: { canonical: '/visiting-card' },
   openGraph: {
     type: 'profile',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'Rakesh Agarwal, IRS — Digital Visiting Card',
     description:
-      'Save contact, call, or email Rakesh Agarwal — Advocate & Advisor specializing in Customs & Indirect Tax. Additional Commissioner (Rtd.), IRS.',
+      'Save contact, call, or email Rakesh Agarwal — Advocate & Advisor specializing in Customs & Indirect Tax. Additional Commissioner (Retd.), IRS.',
     images: [{ url: '/og-card.png', width: 1200, height: 630 }],
   },
   twitter: {

@@ -15,11 +15,11 @@ import BentoCaseLedger from '@/components/archive/variant/BentoCaseLedger';
 export const metadata: Metadata = {
   title: 'Rakesh Agarwal — Advocate & Advisor',
   description:
-    'Customs & Indirect Tax | Additional Commissioner (Rtd.) | GST, Customs, CHA, Central Excise, Service Tax, EOU, SEZ, PMLA, DRT',
+    'Customs & Indirect Tax | Additional Commissioner (Retd.) | GST, Customs, CHA, Central Excise, Service Tax, EOU, SEZ, PMLA, DRT',
   openGraph: {
     title: 'Rakesh Agarwal — Advocate & Advisor',
     description:
-      'Customs & Indirect Tax | Additional Commissioner (Rtd.) | CESTAT Practitioner',
+      'Customs & Indirect Tax | Additional Commissioner (Retd.) | CESTAT Practitioner',
     images: [{ url: '/og-card.png', width: 1200, height: 630 }],
   },
 };
@@ -144,7 +144,7 @@ export default function Variant() {
             <div className="bento-editorial__attr">
               <div className="bento-editorial__name">Rakesh Agarwal</div>
               <div className="bento-editorial__role">
-                Former Additional Commissioner, IRS (C&amp;IT)<br />
+                Additional Commissioner (Retd.), IRS (C&amp;IT)<br />
                 Department Representative, CESTAT
               </div>
             </div>

@@ -22,7 +22,7 @@ export default function AboutSection() {
                 width={500}
                 height={667}
               />
-              <div className="about__portrait-tag">Additional Commissioner &middot; IRS</div>
+              <div className="about__portrait-tag">Additional Commissioner (Retd.) &middot; IRS</div>
             </ScrollReveal>
           </div>
 
